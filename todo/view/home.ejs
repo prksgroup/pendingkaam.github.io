@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <form method="POST" id="form-todo">
+        <h1>TODO APP </h1>
+        <input id="description" type="text" name="description" placeholder="Description about work.......">
+        <select name="category" id="select-category">
+                <option value="">Choose Category</option>
+            <option value="Personel">Personel</option>
+            <option value="School">School</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Other">Other</option>
+        </select>
+        <input id="date" type="date" name="date">
+        <button type="submit" id="addtask-button" formaction="/timetable"><i class="fas fa-plus"></i> ADD TASK</button>
+        <button type="submit" id="deletetask-button" formaction="/removelist"><i class="fas fa-trash-alt"></i> DELETE TASK</button>
+
+        <ol id="adding-items">
+            <%
+            for(let i=0;i<todo.length;i++){%>
+                <li>
+
+                    <input type="checkbox" id="checkbox-id" name="task" value="<%=todo[i].id%>">
+                    <div id="list-div">
+                        <%=todo[i].description%>
+                            <br>
+                            <%=todo[i].date%>
+
+                    </div>
+                    <div id="category-div">
+                        <button style="margin-right:0px;width:100px;height:30px;color: black;background-color: white;font-family: sans-serif;border-style: none;margin-left: 10px;">
+                            <%=todo[i].category%>
+                        </button>
+                    </div>
+                </li>
+                <% } 
+                %>
+
+        </ol>
+
+
+
+
+    </form>
+
+
+
+</body>
+
+</html>
