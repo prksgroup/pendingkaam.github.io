@@ -8,15 +8,21 @@ h1 {
     margin-left: 35%;
 }
 
+
+/*Form and its parts styles*/
+
 #form-todo {
     position: relative;
     width: 600px;
     height: auto;
-    border: 1px solid black;
-    left: 35%;
+    margin-top: 2%;
+    left: 33%;
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.575);
+    border-top: 10px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #description {
@@ -34,6 +40,9 @@ h1 {
     height: 46px;
 }
 
+
+/*Add task button styles*/
+
 #addtask-button {
     color: white;
     background-color: crimson;
@@ -46,6 +55,13 @@ h1 {
     margin-top: 20px;
 }
 
+#addtask-button:hover {
+    background: linear-gradient(black, crimson);
+}
+
+
+/*Delete task button styles*/
+
 #deletetask-button {
     color: white;
     background-color: black;
@@ -55,6 +71,13 @@ h1 {
     border-style: none;
     margin-top: 20px;
 }
+
+#deletetask-button:hover {
+    background: linear-gradient(black, crimson);
+}
+
+
+/*Ordere list styles*/
 
 #adding-items {
     width: 100%;
@@ -91,5 +114,4 @@ h1 {
 #category-div {
     width: 200px;
     height: auto;
-    border: 1px solid white;
 }
